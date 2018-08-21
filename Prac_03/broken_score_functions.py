@@ -13,13 +13,13 @@ def main():
 
 def determine_score_strength(score):
     if score < 0 or score > 100:
-        print("Invalid score")
+        return("Invalid score")
     elif score >= 90:
-        print("Excellent")
+        return("Excellent")
     elif score >= 50:
-        print("Passable")
+        return("Passable")
     else:
-        print("Bad")
+        return("Bad")
 
 
 def get_score():

@@ -4,16 +4,16 @@ MIN_LENGTH = 9
 
 
 def main():
-    valid = False
     password = get_password()
 
-    while not valid:
-        if len(password) > MIN_LENGTH:
-            mask_password(password)
-            valid = True
-        else:
-            print("Invalid password length.")
-            password = input("Please input a password great than {} characters: ".format(MIN_LENGTH))
+    if len(password) > MIN_LENGTH:
+        return True
+    else:
+        print("Invalid password length.")
+        password = input("Please input a password great than {} characters: ".format(MIN_LENGTH))
+
+    print_mask_password(password)
+
 
 
 def get_password():
@@ -21,7 +21,7 @@ def get_password():
     return input("Please input a password great than {} characters: ".format(MIN_LENGTH))
 
 
-def mask_password(password):
+def print_mask_password(password):
     """Print masked password"""
     print("*" * len(password))
     print("\n")
