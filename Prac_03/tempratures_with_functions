@@ -4,31 +4,47 @@ temperature conversion with functions used
 
 """
 
-def main():
+
+
+
 
 MENU = """C - Convert Celsius to Fahrenheit
 F - Convert Fahrenheit to Celsius
 Q - Quit"""
-print(MENU)
-choice = input(">>> ").upper()
 
-while choice != "Q":
-    if choice == "C":
-        celsius = float(input("Celsius: "))
-        fahrenheit = celsius * 9.0 / 5 + 32
-        print("Result: {:.2f} F".format(fahrenheit))
-    elif choice == "F":
-        # TODO: Write this section to convert F to C and display the result
-        fahrenheit = float(input("Fahrenheit: "+"\n"))
-        # Hint: celsius = 5 / 9 * (fahrenheit - 32)
-        celsius = ((5/9)*(fahrenheit - 32))
-        print("Results: {:.2f} C".format(celsius))
 
-        # Remove the "pass" statement when you are done. It's a placeholder.
-    else:
-        print("Invalid option")
+def main():
+    """Covert temprature """
     print(MENU)
     choice = input(">>> ").upper()
-print("Thank you.")
+
+    while choice != "Q":
+        if choice == "C":
+            celsius = float(input("Celsius: "))
+            fahrenheit = get_fahrenheit(celsius)
+            print("Result: {:.2f} F".format(fahrenheit))
+        elif choice == "F":
+            fahrenheit = float(input("Fahrenheit: " + "\n"))
+            celsius = get_celsius(fahrenheit)
+            print("Results: {:.2f} C".format(celsius))
+
+        else:
+            print("Invalid option")
+        print(MENU)
+        choice = input(">>> ").upper()
+
+    print("Thank you.")
+
+
+def get_fahrenheit(celsius):
+    """Convert celsius to fahrenheit"""
+    celsius * 9.0 / 5 + 32
+    return celsius
+
+
+def get_celsius(fahrenheit):
+    """Convert fahrenheit to celsius"""
+    return ((5 / 9) * (fahrenheit - 32))
+
 
 main()
