@@ -1,5 +1,5 @@
 """
-Create numbers list and peform operations
+Create numbers list and perform operations
 by Matthew Sampson
 
 """
@@ -13,7 +13,7 @@ def main():
 
     numbers = []
     for i in range(NUMBER_OF_INPUTS):
-        current_number = get_number()
+        current_number = int(get_number())
         numbers.append(current_number)
 
     print(numbers)
