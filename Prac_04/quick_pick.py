@@ -38,7 +38,7 @@ def print_array(array, number):
     """format input before printing"""
 
     for number in array:
-        print(" ".join("{:2} ".format(array))
+        print(" ".join("{:2} ".format(array)))
 
 
 def get_number_of_picks():
