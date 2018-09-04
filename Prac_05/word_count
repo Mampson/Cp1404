@@ -1,0 +1,25 @@
+"""
+Word count in input string
+by Matthew Sampson
+
+"""
+
+string_occurence = {}
+strings_input = input(" Please write here: ")
+
+string_elements = strings_input.split(" ")
+
+for string in string_elements:
+    count = string_occurence.get(string, 0)
+
+    string_occurence[string] = count + 1
+
+strings = list(string_occurence.keys())
+# gets strings and number of occurences
+
+strings.sort()
+
+biggest_string = max((len(string) for string in strings))
+
+for string in strings:
+    print("{:{}} : {} ".format(string, biggest_string, string_occurence[string]))
