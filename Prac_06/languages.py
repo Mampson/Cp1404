@@ -18,10 +18,10 @@ def main():
     print(ruby)
 
     print("Dynamic languages are: ")
-    
+
     for language in languages:
         if language.is_dynamic():
-            print(language)
+            print(language.title)
 
 
 main()

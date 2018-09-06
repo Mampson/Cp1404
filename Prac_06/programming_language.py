@@ -22,11 +22,11 @@ class ProgramingLanguage:
 
     def __str__(self):
         """Returns string of language object info"""
-        return "Title = {}, Typing status  = {}, Reflection = {}, Year made = {} "
+        return "{}, {} typing, Reflection = {}, Year made: {} ".format(
+            self.title, self.typing, self.reflection, self.year)
 
     def is_dynamic(self):
         """determine if typing is dynamic"""
+        return self.typing == "Dynamic"
 
-        return self.typing == "dynamic"
-    
 
