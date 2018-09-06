@@ -21,7 +21,7 @@ class ProgramingLanguage:
         self.year = year
 
     def __str__(self):
-        """Returns string of language object info"""
+        """Return string of language object information"""
         return "{}, {} typing, Reflection = {}, Year made: {} ".format(
             self.title, self.typing, self.reflection, self.year)
 
