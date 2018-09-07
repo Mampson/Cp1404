@@ -8,7 +8,7 @@ VINTAGE_AGE = 50
 class Guitar:
     """Guitar Object"""
 
-    def __int__(self, name="", year=0, cost=0):
+    def __init__(self, name="", year=0, cost=0):
         """Initialize Guitar Object
 
             name = string
