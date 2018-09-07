@@ -31,14 +31,12 @@ def main():
 
     if guitars is not None:
 
-        for i in range(len(guitars)):
-
-            over_50 = ("This is a Vintage Guitar" if guitars[i].is_vintage() else "")
+        for i, guitar in enumerate(guitars):
+            vintage_y_or_n = ("This is a Vintage Guitar" if guitars[i].is_vintage() else "")
             # Ternary operator
 
-            print("Guitar {}: {:<20} ({}), Cost: $ {:10.2f}  {}".format(i +1, guitars[i].name, guitars[i].year,
-                                                                            guitars[i].cost, over_50))
+            print("Guitar {0}: {1.name:<20} ({1.year}), Cost: $ {1.cost:10.2f}  {2}".format(i + 1, guitar,
+                                                                                            vintage_y_or_n))
 
 
 main()
-
