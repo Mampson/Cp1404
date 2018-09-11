@@ -35,7 +35,7 @@ def main():
 
             else:
                 print("Your car doesn't have enough fuel!")
-                
+
             print(my_car)
             menu_choice = display_menu()
 

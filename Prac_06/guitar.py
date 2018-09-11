@@ -25,6 +25,9 @@ class Guitar:
         """Return string of Guitar information"""
         return "{} ( {} ) : {} ".format(self.name, self.year, self.cost)
 
+    def __lt__(self, other):
+        """ Return expression of what are to be sorted by eg this is seconds to that """
+
     def get_age(self):
         """Give age of Guitar"""
         return PRESENT_YEAR - self.year

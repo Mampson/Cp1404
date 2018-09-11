@@ -27,6 +27,7 @@ def main():
     guitars.append(Guitar("Fender Stratocaster", 2014, 765.40))
     guitars.append(Guitar("Sampson Special A8", 1990, 2800.00))
 
+    guitars.sort()
     print("My Guitars: ")
 
     if guitars is not None:
