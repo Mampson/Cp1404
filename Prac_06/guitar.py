@@ -5,6 +5,7 @@ by Matthew Sampson
 PRESENT_YEAR = 2018
 VINTAGE_AGE = 50
 
+
 class Guitar:
     """Guitar Object"""
 
