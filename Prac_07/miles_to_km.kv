@@ -1,0 +1,35 @@
+BoxLayout:
+    id: main_box
+    orientation: "vertical"
+
+    BoxLayout:
+        id: top_panel
+        BoxLayout:
+            orientation: "horizontal"
+            TextInput:
+                id: input_field
+                text: '7'
+                font_size: 48
+                multiline: False
+
+        BoxLayout:
+            orientation: "vertical"
+
+            Button:
+                id: up_button
+                text: " Up "
+            Button:
+                id: down_button
+                text: " Down "
+
+
+    Button:
+        id: convert_button
+        text: " Convert miles to kilometers "
+        on_press: app.handle_calculate(float(input_field.text))
+
+    Label:
+        id: output_label
+        color: (1, 0, 1, 1)
+        font_size: 48
+
