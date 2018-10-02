@@ -10,6 +10,7 @@ BoxLayout:
                 id: input_field
                 text: '7'
                 font_size: 48
+                on_text: app.handle_calculate()
                 multiline: False
 
         BoxLayout:
@@ -18,15 +19,17 @@ BoxLayout:
             Button:
                 id: up_button
                 text: " Up "
+                on_press: app.handle_increment(1)
             Button:
                 id: down_button
                 text: " Down "
+                on_press: app.handle_increment(-1)
 
 
     Button:
         id: convert_button
         text: " Convert miles to kilometers "
-        on_press: app.handle_calculate(float(input_field.text))
+        on_press: app.handle_calculate()
 
     Label:
         id: output_label

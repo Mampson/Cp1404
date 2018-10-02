@@ -1,0 +1,23 @@
+BoxLayout:
+    orientation: "vertical"
+
+    BoxLayout:
+        orientation: "vertical"
+           # main box for new widgets
+        id: name_entries
+        cols: 1
+        orientation: "vertical"
+    Label:
+        size_hint_y: 0.1
+        text: " Space for Names "
+    BoxLayout:
+        orientation: "horizontal"
+        size_hint_y: 0.3
+
+        Button:
+            text: "Add names"
+            on_release: app.create_widgets()
+
+        Button:
+            text: "Clear all names"
+            on_release: app.clear_widgets()
