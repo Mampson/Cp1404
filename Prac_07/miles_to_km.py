@@ -39,7 +39,6 @@ class MileToKmApp(App):
     def get_valid_distance(self):
         """Check for valid distance input"""
         is_valid_input = False
-
         while not is_valid_input:
             try:
                 value = float(self.root.ids.input_field.text)
