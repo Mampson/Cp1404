@@ -1,13 +1,14 @@
 """
 CP1404/CP5632 Practical
-Demos of various os module examples
+Clean up file program
+by Matthew Sampson
 """
 import shutil
 import os
 
 
 def main():
-    """Demo os module functions."""
+    """File clean up program"""
     print("Starting directory is: {}".format(os.getcwd()))
 
     os.chdir('Lyrics/Christmas')
@@ -19,21 +20,12 @@ def main():
     except FileExistsError:
         pass
 
-    # Loop through each file in the (current) directory
     for filename in os.listdir('.'):
-        # Ignore directories, just process files
         if os.path.isdir(filename):
             continue
 
         new_name = get_fixed_filename(filename)
         print("Renaming {} to {}".format(filename, new_name))
-
-        # TODO: Try these options one at a time
-        # Option 1: rename file to new name - in place
-        #os.rename(filename, new_name)
-
-        # Option 2: move file to new place, with new name
-        shutil.move(filename, 'temp/' + new_name)
 
 
 def get_fixed_filename(filename):
@@ -51,7 +43,6 @@ def demo_walk():
         print("\tand files:", filenames)
         print("(Current working directory is: {})".format(os.getcwd()))
 
-        # TODO: add a loop to rename the files
         for filename in filenames:
             combined_name =  os.path.join(directory_name, filename)
             edited_name =  os.path.join(directory_name, get_fixed_filename(filename))
@@ -60,5 +51,5 @@ def demo_walk():
 
 
 
-#main()
-demo_walk()
+main()
+#demo_walk()
