@@ -59,8 +59,8 @@ def demo_walk():
 
         # TODO: add a loop to rename the files
         for filename in filenames:
-            combined_name =  os.path.join(directory_name, filename)
-            edited_name =  os.path.join(directory_name, get_fixed_filename(filename))
+            combined_name = os.path.join(directory_name, filename)
+            edited_name = os.path.join(directory_name, get_fixed_filename(filename))
             os.rename(combined_name, edited_name)
 
 
